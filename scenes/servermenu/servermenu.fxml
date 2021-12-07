@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Text?>
+
+<!-- DrLeonardo refactor -->
+
+<Pane fx:id="serverPane" prefHeight="500.0" prefWidth="900.0" styleClass="transparent" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <Pane fx:id="layout" prefHeight="500.0" prefWidth="900.0" styleClass="transparent">
+      <Pane id="contentnew" layoutX="234.0" prefHeight="500.0" prefWidth="666.0" />
+      <Pane id="hub2" layoutX="256.0" layoutY="54.0" prefHeight="251.0" prefWidth="251.0" />
+      <Pane id="hub3" layoutX="556.0" layoutY="-51.0" prefHeight="309.0" prefWidth="309.0" />
+      <Pane id="hub1" layoutX="406.0" layoutY="226.0" prefHeight="266.0" prefWidth="342.0" />
+      <Pane id="playerlogoborder" layoutX="679.0" layoutY="26.0" prefHeight="40.0" prefWidth="192.0" />
+
+        <!-- Навбар -->
+         <Pane id="header" prefHeight="500.0" prefWidth="900.0">
+             <children>
+
+                 <!-- Кнопки управления -->
+                 <Pane id="controls" layoutX="1.0" prefHeight="500.0" prefWidth="900.0">
+                     <children>
+
+                         <!-- Кнопка выхода -->
+                         <Button id="deauth" alignment="CENTER" contentDisplay="CENTER" layoutX="243.0" layoutY="26.0" prefHeight="40.0" prefWidth="182.0" styleClass="icon-button" textAlignment="CENTER" textFill="#464646">
+                             <tooltip>
+                                 <Tooltip id="deauthTooltip" text="%runtime.scenes.servermenu.deauthTooltip" />
+                             </tooltip>
+                     <graphic>
+                        <Pane id="logout" prefHeight="30.0" prefWidth="363.0">
+                           <children>
+                              <Text id="textlogout" fill="WHITE" layoutX="15.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выйти из аккаунта" />
+                           </children>
+                        </Pane>
+                     </graphic>
+                         </Button>
+
+                         <!-- Кнопка закрыть -->
+                         <Button id="exit" graphicTextGap="0.0" layoutX="8.0" layoutY="10.0" mnemonicParsing="false" styleClass="icon-button">
+                             <graphic>
+                                 <SVGPath id="close" content="M 0 0 A 1 1 0 0 0 0 11 A 1 1 0 0 0 0 0" styleClass="icon-button-color" />
+                             </graphic>
+                             <tooltip>
+                                 <Tooltip id="exitTooltip" text="%runtime.scenes.servermenu.exitTooltip" />
+                             </tooltip>
+                         </Button>
+
+                         <!-- Кнопка свернуть -->
+                         <Button id="minimize" layoutX="27.0" layoutY="10.0" mnemonicParsing="false" styleClass="icon-button">
+                             <graphic>
+                                 <SVGPath id="minimize" content="M 0 0 A 1 1 0 0 0 0 11 A 1 1 0 0 0 0 0" styleClass="icon-button-color" />
+                             </graphic>
+                             <tooltip>
+                                 <Tooltip id="minimizeTooltip" text="%runtime.scenes.servermenu.minimizeTooltip" />
+                             </tooltip>
+                         </Button>
+      
+                       <!-- Аватар игрока -->
+                     <ImageView id="avatar" fitHeight="32.0" fitWidth="32.0" layoutX="833.0" layoutY="30.0" smooth="false">
+                         <Image url="@../../images/icons/default.png" />
+                     </ImageView>
+      
+                       <!-- Никнейм игрока -->
+                     <Label id="nickname" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="684.0" layoutY="42.0" prefHeight="20.0" prefWidth="142.0" text="PLAYER123" textAlignment="RIGHT">
+                         <padding>
+                             <Insets left="10.0" />
+                         </padding>
+                     </Label>
+      
+                       <!-- Счет игрока -->
+                  <Label id="money" layoutX="249.0" layoutY="54.0" prefHeight="20.0" prefWidth="282.0" text="100 МОНЕТ" visible="false">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                      <tooltip>
+                          <Tooltip id="moneyTooltip" text="%runtime.scenes.servermenu.moneyTooltip" />
+                      </tooltip>
+                  </Label>
+                  <Text id="intertext" layoutX="694.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Вы выполнили вход как" />
+                  <Text id="newtxt" layoutX="16.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите сервер" />
+                     </children>
+                 </Pane>
+      
+                                                                    <!-- Блок списка серверов -->
+               <ScrollPane id="servers" fx:id="serverlist" layoutX="16.0" layoutY="100.0" prefHeight="340.0" prefWidth="192.0" vbarPolicy="NEVER" vmax="0.0">
+               <content>
+                  <VBox prefHeight="340.0" prefWidth="190.0" />
+               </content>
+               </ScrollPane>
+             </children>
+         </Pane>
+    </Pane>
+
+    <!-- Подключение стилей-->
+    <stylesheets>
+        <URL value="@servermenu.css" />
+        <URL value="@../../styles/global.css" />
+        <URL value="@../../styles/variables.css" />
+    </stylesheets>
+
+</Pane>

@@ -1,0 +1,52 @@
+/*-- DrLeonardo styles refactor --*/
+
+@import "../../styles/global.css";
+@import "../../styles/variables.css";
+@font-face {
+    font-family: 'SF Pro Text Semibold';
+    src: url('../../styles/SF-Pro-Text-Semibold.otf');
+}
+@font-face {
+    font-family: 'SF Pro Text Regular';
+    src: url('../styles/SF-Pro-Text-Regular.otf');
+}
+/*-- Вывод данных --*/
+#options-detail {
+    -fx-background-color: #242424;
+    -fx-background-radius: 9px;
+}
+#close{
+    -fx-fill: #F96057;
+}
+#minimize{
+    -fx-fill: #F8CE52;
+}
+#logout{
+    -fx-background-color: #242424;
+    -fx-background-radius: 7px;
+}
+#textlogout{
+    -fx-font-size: 14px;
+    -fx-font-family: 'SF Pro Text Semibold';
+}
+/*-- Чекбоксы --*/
+.optional-container {
+    -fx-background-color: transparent;
+    -fx-padding: 15 0 0 15px;
+}
+.optional-checkbox {
+    -fx-fill: #FFFFFF;
+    -fx-font-size: 14px;
+    -fx-font-family: 'SF Pro Text Semibold';
+}
+.optional-label {
+    -fx-fill: #FFFFFF;
+    -fx-font-size: 12px;
+    -fx-label-padding: 0 20 0 30px;
+    -fx-font-family: 'SF Pro Text Regular';
+}
+#headingDialog{
+    -fx-font-family: 'SF Pro Text Semibold';
+    -fx-text-fill: #FFFFFF;
+}
+/*-- DrLeonardo styles refactor --*/

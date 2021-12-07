@@ -1,0 +1,111 @@
+/*-- DrLeonardo styles refactor --*/
+
+@import "../styles/global.css";
+@import "../styles/variables.css";
+@font-face {
+    font-family: 'SF Pro Text Semibold';
+    src: url('../styles/SF-Pro-Text-Semibold.otf');
+}
+@font-face {
+    font-family: 'SF Pro Display Bold';
+    src: url('../styles/SF-Pro-Display-Bold.otf');
+}
+@font-face {
+    font-family: 'SF Pro Text Regular';
+    src: url('../styles/SF-Pro-Text-Regular.otf');
+}
+
+/*-- Уведомления --*/
+.text-font-head {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+    -fx-font-family: 'SF Pro Display Bold';
+}
+.text-font-desc {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 10px;
+    -fx-font-family: 'SF Pro Display Regular';
+}
+#notificationPane {
+    -fx-background-radius: 10px 0px 0px 10px;
+}
+
+#panenotific{
+    -fx-background-color: #25252599;
+    -fx-background-radius: 9px;
+}
+
+/*-- Блок сервера --*/
+.serverButtons {
+    -fx-background-color: #242424;
+    -fx-background-radius: 9px;
+}
+#serverButton {
+    -fx-background-radius: 9px;
+    -fx-cursor: hand;
+}
+#serverButton:hover {
+    -fx-background-color: #242424;
+}
+#serverButtonSelected,
+#serverButtonPressed {
+    -fx-background-color: #242424;
+}
+.serverButtonsActive {
+    -fx-background-color: #242424;
+}
+#serverLogo {
+    -fx-background-position: center;
+}
+
+
+/*-- Информация о сервере --*/
+#nameServer {
+    -fx-fill: -fx-black2C;
+    -fx-font-size: 16px;
+    -fx-wrap-text: false;
+    -fx-font-family: 'SF Pro Text Regular';
+}
+#nameServer:hover {
+    -fx-fill: -fx-black2C-hover;
+}
+#genreServer {
+    -fx-fill: #FFFFFF;
+    -fx-font-size: 12px;
+    -fx-font-family: 'SF Pro Text Regular';
+}
+
+
+/*-- Индикатор онлайна --*/
+#online {
+    -fx-text-fill: -fx-white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-font-family: 'SF Pro Text Regular';
+}
+/*-- Кнопка сохранить (для всех сцен) --*/
+#save {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-align: center;
+    -fx-text-fill: -fx-white;
+    -fx-background-color: #242424;
+    -fx-font-family: 'SF Pro Text Semibold';
+    -fx-background-radius: 9px;
+}
+#save:hover {
+    -fx-background-color: #272727;
+}
+#reset {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-align: center;
+    -fx-text-fill: -fx-white;
+    -fx-background-color: #F96057;
+    -fx-font-family: 'SF Pro Text Semibold';
+    -fx-background-radius: 9px;
+}
+#reset:hover {
+    -fx-background-color: -fx-red-hover;
+}
+/*-- DrLeonardo styles refactor --*/

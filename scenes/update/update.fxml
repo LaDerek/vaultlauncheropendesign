@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Text?>
+
+<!-- DrLeonardo refactor -->
+
+<Pane fx:id="overlay" prefHeight="500.0" prefWidth="900.0" styleClass="transparent, blur" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+
+    <!-- Навбар -->
+    <Pane id="header" prefHeight="500.0" prefWidth="900.0">
+        <children>
+
+            <!-- Кнопки управления -->
+            <Pane id="controls" prefHeight="500.0" prefWidth="900.0">
+                <children>
+
+                <!-- Заголовок сцены -->
+                <Text id="headingUpdate" layoutX="23.0" layoutY="79.0" text="%runtime.scenes.update.headingUpdate" />
+
+                <!-- Кнопка закрыть -->
+                <Button id="exit" graphicTextGap="0.0" layoutX="9.0" layoutY="10.0" mnemonicParsing="false" styleClass="icon-button">
+                    <graphic>
+                        <SVGPath id="close" content="M 0 0 A 1 1 0 0 0 0 11 A 1 1 0 0 0 0 0" styleClass="icon-button-color" />
+                    </graphic>
+                    <tooltip>
+                        <Tooltip id="exitTooltip" text="%runtime.scenes.login.exitTooltip" />
+                    </tooltip>
+                </Button>
+
+                <!-- Кнопка свернуть -->
+                <Button id="minimize" layoutX="28.0" layoutY="10.0" mnemonicParsing="false" styleClass="icon-button">
+                    <graphic>
+                        <SVGPath id="minimize" content="M 0 0 A 1 1 0 0 0 0 11 A 1 1 0 0 0 0 0" styleClass="icon-button-color" />
+                    </graphic>
+                    <tooltip>
+                        <Tooltip id="minimizeTooltip" text="%runtime.scenes.login.minimizeTooltip" />
+                    </tooltip>
+                </Button>
+
+                <!-- Кнопка повторить -->
+                <Button id="reload" layoutX="718.0" mnemonicParsing="false" styleClass="icon-button" visible="false">
+                    <graphic>
+                        <SVGPath content="M534.857 4C533.286 4 532 5.28599 532 6.85714V25.1429C532 26.714 533.286 28 534.857 28H553.143C554.714 28 556 26.714 556 25.1429V6.85714C556 5.28599 554.714 4 553.143 4H534.857ZM534.857 5.14286H553.143C554.096 5.14286 554.857 5.90372 554.857 6.85714V25.1429C554.857 26.0963 554.096 26.8571 553.143 26.8571H534.857C533.904 26.8571 533.143 26.0963 533.143 25.1429V6.85714C533.143 5.90372 533.904 5.14286 534.857 5.1M534.857 4C533.286 4 532 5.28599 532 6.85714V25.1429C532 26.714 533.286 28 534.857 28H553.143C554.714 28 556 26.714 556 25.1429V6.85714C556 5.28599 554.714 4 553.143 4H534.857ZM534.857 5.14286H553.143C554.096 5.14286 554.857 5.90372 554.857 6.85714V25.1429C554.857 26.0963 554.096 26.8571 553.143 26.8571H534.857C533.904 26.8571 533.143 26.0963 533.143 25.1429V6.85714C533.143 5.90372 533.904 5.14286 534.857 5.14286Z M546.024 11.5931C544.919 11.1237 543.673 11.0508 542.514 11.404C540.311 12.0739 538.883 14.0905 539.032 16.3099L537.528 16.4056C537.335 13.514 539.197 10.889 542.061 10.0163C543.737 9.50586 545.554 9.68359 547.096 10.488L548.538 9L548.923 13.1266L544.395 13.2725L546.024 11.5931ZM545.968 21.9837C545.333 22.1751 544.674 22.2731 544.02 22.2731C542.953 22.2731 541.893 22.0065 540.937 21.5098L539.492 23L539.11 18.8734L543.635 18.7275L542.009 20.4069C543.109 20.874 544.355 20.9492 545.514 20.596C547.717 19.9238 549.147 17.9049 548.999 15.6901L550.5 15.5944C550.698 18.4814 548.833 21.1087 545.968 21.9837Z" styleClass="icon-button-color" />
+                    </graphic>
+                    <tooltip>
+                        <Tooltip id="reloadTooltip" text="%runtime.scenes.update.reloadTooltip" />
+                    </tooltip>
+                </Button>
+
+                <!-- Кнопка отменить загрузку (java 11+) -->
+                <Button id="cancel" alignment="CENTER" contentDisplay="CENTER" layoutX="290.0" layoutY="53.0" prefHeight="40.0" prefWidth="124.0" styleClass="icon-button" textAlignment="CENTER">
+                    <tooltip>
+                        <Tooltip id="cancelTooltip" text="%runtime.scenes.update.cancelTooltip" />
+                    </tooltip>
+                  <graphic>
+                     <Pane id="logout" prefHeight="32.0" prefWidth="108.0">
+                        <children>
+                              <SVGPath content="M9.99121 18.7422C14.9746 18.7422 19.0879 14.6289 19.0879 9.6543C19.0879 4.67969 14.9658 0.566406 9.98242 0.566406C5.00781 0.566406 0.90332 4.67969 0.90332 9.6543C0.90332 14.6289 5.0166 18.7422 9.99121 18.7422ZM6.99414 13.4863C6.52832 13.4863 6.15918 13.1172 6.15918 12.6426C6.15918 12.4316 6.24707 12.2207 6.41406 12.0625L8.80469 9.66309L6.41406 7.27246C6.24707 7.11426 6.15918 6.90332 6.15918 6.69238C6.15918 6.21777 6.52832 5.85742 6.99414 5.85742C7.24023 5.85742 7.43359 5.93652 7.5918 6.09473L9.99121 8.48535L12.3994 6.08594C12.5752 5.91895 12.7598 5.83984 12.9971 5.83984C13.4629 5.83984 13.832 6.20898 13.832 6.6748C13.832 6.89453 13.7441 7.08789 13.5771 7.26367L11.1865 9.66309L13.5771 12.0537C13.7354 12.2207 13.8232 12.4229 13.8232 12.6426C13.8232 13.1172 13.4541 13.4863 12.9795 13.4863C12.7422 13.4863 12.54 13.3984 12.373 13.2402L9.99121 10.8584L7.60938 13.2402C7.45117 13.4072 7.24023 13.4863 6.99414 13.4863Z" layoutX="6.0" layoutY="6.0" styleClass="icon-button-error" />
+                           <Text id="textlogout" fill="WHITE" layoutX="30.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Отменить" />
+                        </children>
+                     </Pane>
+                  </graphic>
+                </Button>
+            
+                <!-- Прогрессбар-->
+                <ProgressBar id="progress" layoutX="22.0" layoutY="450.0" prefHeight="29.0" prefWidth="854.0" progress="0.0" />
+
+                </children>
+            </Pane>
+        </children>
+    </Pane>
+
+    <TextArea id="outputUpdate" editable="false" layoutX="143.0" layoutY="126.0" prefHeight="288.0" prefWidth="732.0" wrapText="true">
+        <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+        </padding>
+    </TextArea>
+
+    <!-- Информация-->
+    <Pane id="update-detail" layoutX="23.0" layoutY="267.0" prefHeight="147.0" prefWidth="96.0">
+      <children>
+         <Text id="speed-text" fill="WHITE" layoutY="92.0" styleClass="speed-text" text="MB/S" textAlignment="CENTER" wrappingWidth="96.0" />
+         <Text id="speed" layoutY="73.0" styleClass="speed" text="0" textAlignment="CENTER" wrappingWidth="96.00001573562622" />
+         <Text id="speedErr" layoutY="83.0" opacity="0.0" text="ERR" textAlignment="CENTER" wrappingWidth="96.0">
+            <styleClass>
+               <String fx:value="speed" />
+               <String fx:value="speedError" />
+            </styleClass>
+         </Text>
+          <Label id="volume" alignment="CENTER" contentDisplay="RIGHT" layoutX="1.0" layoutY="114.0" prefHeight="19.0" prefWidth="96.0" text="[240 MB]" textFill="WHITE" />
+      </children>
+   </Pane>
+
+    <!-- Подключение стилей-->
+    <stylesheets>
+        <URL value="@update.css" />
+        <URL value="@../../styles/global.css" />
+        <URL value="@../../styles/variables.css" />
+    </stylesheets>
+
+</Pane>

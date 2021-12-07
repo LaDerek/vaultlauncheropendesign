@@ -1,0 +1,89 @@
+/*-- DrLeonardo styles refactor --*/
+
+@import "../../styles/global.css";
+@import "../../styles/variables.css";
+@font-face {
+    font-family: 'SF Pro Text Semibold';
+    src: url('../../styles/SF-Pro-Text-Semibold.otf');
+}
+@font-face {
+    font-family: 'SF Pro Text Regular';
+    src: url('../../styles/SF-Pro-Text-Regular.otf');
+}
+@font-face {
+    font-family: 'SF Pro Text Medium';
+    src: url('../../styles/SF-Pro-Text-Medium.otf');
+}
+@font-face {
+    font-family: 'inter';
+    src: url('../../styles/Inter-SemiBold.ttf');
+}
+
+
+/*-- Информация сервера --*/
+#server-detail {
+    -fx-background-radius: 0px 0px 9px 0px;
+}
+#server-detail > #serverName {
+    -fx-font-size: 24px;
+    -fx-font-family: 'SF Pro Text Semibold';
+}
+#nickname {
+    -fx-font-size: 14px;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: 'SF Pro Text Semibold';
+}
+#close{
+    -fx-fill: #F96057;
+}
+#minimize{
+    -fx-fill: #F8CE52;
+}
+#server-detail > #serverDescription {
+    -fx-font-style: normal;
+    -fx-font-weight: normal;
+    -fx-font-size: 14px;
+    -fx-font-family: 'SF Pro Text Regular';
+}
+#paneasd{
+    -fx-background-color: #303030;
+    -fx-background-radius: 0px 0px 9px 0px;
+}
+#paneimg{
+    -fx-background-image: url('../../images/Earth+.png');
+    -fx-background-size: stretch;
+    -fx-background-radius: 9px;
+}
+
+/*-- Фон сервера --*/
+#serverImage {
+    -fx-background-color: transparent;
+    -fx-background-size: cover;
+    -fx-background-image: url('../../images/servers/imageExample.png');
+}
+#logout{
+    -fx-background-color: #242424;
+    -fx-background-radius: 7px;
+}
+#textlogout{
+    -fx-font-size: 14px;
+    -fx-font-family: 'SF Pro Text Semibold';
+}
+#mods{
+    -fx-font-size: 14px;
+    -fx-font-family: 'SF Pro Text Semibold';
+}
+#playerlogoborder{
+    -fx-background-color: #242424;
+    -fx-background-radius: 128px;
+}
+#intertext{
+    -fx-font-size: 12px;
+    -fx-fill: #808080;
+    -fx-font-family: 'inter';
+}
+#clasdasd{
+    -fx-font-family: 'SF Pro Text Medium';
+}
+
+/*-- DrLeonardo styles refactor --*/

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<!-- DrLeonardo refactor -->
+
+<Pane fx:id="loginPane" prefHeight="500.0" prefWidth="900.0" styleClass="transparent" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+     <Pane fx:id="layout" prefHeight="500.0" prefWidth="900.0" styleClass="transparent">
+
+         <!-- Навбар -->
+      <Pane id="header" prefHeight="500.0" prefWidth="900.0">
+         <children>
+
+             <!-- Кнопки управления -->
+            <Pane id="controls" prefHeight="500.0" prefWidth="900.0">
+               <children>
+
+                   <!-- Ссылки -->
+                  <Pane id="links" prefHeight="500.0" prefWidth="900.0">
+                     <children>
+                        <Text id="forgotPass" layoutX="407.0" layoutY="458.0" styleClass="forgotPass" text="%runtime.scenes.login.forgotPass" textAlignment="RIGHT" wrappingWidth="88.0" />
+                         <FlowPane id="registerPane" layoutX="373.0" layoutY="352.0" prefHeight="26.0" prefWidth="128.0">
+                             <children>
+                                 <Text styleClass="textLogin" text="%runtime.scenes.login.textLogin" textAlignment="CENTER" wrappingWidth="156.123046875" />
+                                 <Text id="createAccount" styleClass="createAccount-text" text="%runtime.scenes.login.createAccount" textAlignment="CENTER" wrappingWidth="155.48779296875" />
+                             </children>
+                         </FlowPane>
+                  
+                                       <!-- Блок атворизации -->
+                        <Pane id="authButtonBlock" fx:id="auth" layoutX="301.0" layoutY="391.0" prefHeight="45.0" prefWidth="300.0">
+                           <children>
+                  
+                                           <!-- Не активная кнопка -->
+                              <Pane id="authUnactive" layoutX="1.0" layoutY="1.0" prefHeight="44.0" prefWidth="300.0" />
+                  
+                                                 <!-- Активная кнопка -->
+                              <Pane id="authActive" prefHeight="45.0" prefWidth="300.0">
+                                 <children>
+                                       <SVGPath id="authBorder" content="M 15 0 L 285 0 C 285 16.5 285 33 285 50 C 195 49.5 105 49.5 15 50 L 15 0 A 16.5 15 90 0 0 0 17 L 0 33 M 15 50 A 16.5 15 90 0 1 0 33 C 5 22 10 11 15 0 M 285 0 A 16.5 15 90 0 1 300 17 C 300 22 300 27.5 300 33 M 285 50 A 16.5 15 90 0 0 300 33 C 295 22 290 11 285 0 M 15 0 C 6 0 0 6 0 17 M 15 50 C 6 50 0 44 0 33 M 285 0 C 294 0 300 6 300 17 M 285 50 C 294 50 300 44 300 33" disable="true" layoutY="-2.0" visible="false" />
+                                       <Button id="authButton" alignment="CENTER" cacheShape="false" cancelButton="true" centerShape="false" contentDisplay="CENTER" defaultButton="true" graphicTextGap="0.0" layoutY="-3.0" prefHeight="48.0" prefWidth="300.0" scaleShape="false" snapToPixel="false" styleClass="authcsss" text="%runtime.scenes.login.goAuth" textFill="WHITE">
+                                       <graphic>
+                                          <Pane>
+                                             <children>
+                                                <SVGPath id="authsvg" content="M 15 0 L 285 0 C 285 16.5 285 33 285 50 C 195 49.5 105 49.5 15 50 L 15 0 A 16.5 15 90 0 0 0 17 L 0 33 M 15 50 A 16.5 15 90 0 1 0 33 C 5 22 10 11 15 0 M 285 0 A 16.5 15 90 0 1 300 17 C 300 22 300 27.5 300 33 M 285 50 A 16.5 15 90 0 0 300 33 C 295 22 290 11 285 0 M 15 0 C 6 0 0 6 0 17 M 15 50 C 6 50 0 44 0 33 M 285 0 C 294 0 300 6 300 17 M 285 50 C 294 50 300 44 300 33" layoutY="1.0" strokeMiterLimit="0.0" styleClass="auth" />
+                                             </children>
+                                          </Pane>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </Pane>
+                               
+                                       </children>
+                        </Pane>
+                  
+                           <!-- Способы авторизации -->
+                           <ScrollPane id="authList" hbarPolicy="NEVER" layoutX="914.0" layoutY="397.0" vbarPolicy="NEVER">
+                               <opaqueInsets>
+                                   <Insets />
+                               </opaqueInsets>
+                               <padding>
+                                   <Insets bottom="5.0" top="5.0" />
+                               </padding>
+                               <content>
+                                   <VBox alignment="BOTTOM_LEFT" />
+                               </content>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Blend />
+                           </effect>
+                           </ScrollPane>
+      
+                         <!-- Кнопка языка -->
+                        <Button id="lang" layoutX="822.0" layoutY="600.0" mnemonicParsing="false" styleClass="icon-button">
+                            <contextMenu>
+                                <ContextMenu id="langChoice">
+                          </ContextMenu>
+                            </contextMenu>
+                            <tooltip>
+                                <Tooltip id="langTooltip" text="%runtime.scenes.login.langTooltip" />
+                            </tooltip>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0">
+                                 <image>
+                                    <Image url="@../../images/Globe.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                  
+                           <!-- Вертикальная полоса -->
+                        <Pane id="leftPane" layoutX="373.0" layoutY="268.0" prefHeight="86.0" prefWidth="155.0" styleClass="vline">
+                            <children>
+                  
+                                <!-- Чекбоксы -->
+                                 <CheckBox id="autoenter" alignment="TOP_LEFT" layoutX="21.0" layoutY="16.0" prefHeight="18.0" prefWidth="128.0" text="%runtime.scenes.login.autoenter" wrapText="true">
+                                     <padding>
+                                         <Insets left="5.0" />
+                                     </padding>
+                                 </CheckBox>
+                                 <CheckBox id="savePassword" alignment="TOP_LEFT" layoutX="21.0" layoutY="42.0" prefHeight="18.0" prefWidth="144.0" text="%runtime.scenes.login.savePassword" wrapText="true">
+                                     <padding>
+                                         <Insets left="5.0" />
+                                     </padding>
+                                 </CheckBox>
+                           </children>
+                        </Pane>
+            
+                                     <!-- Левая часть навбара -->
+                        <Pane id="leftHeaderPane" layoutY="426.0" prefHeight="100.0" prefWidth="156.0">
+                           <children>
+                              <TextFlow layoutX="18.0" layoutY="43.0">
+                                 <children>
+                                    <Text id="logoName" text="%runtime.scenes.login.logoName" />
+                                    <Text id="logoProduct" styleClass="logoTextGray" text="%runtime.scenes.login.logoProduct" />
+                                    <Text id="logoVersion" text="%runtime.scenes.login.logoVersion" />
+                                 </children>
+                              </TextFlow>
+                           </children>
+                        </Pane>
+      
+                         <!-- Кнопка закрыть -->
+                         <Button id="exit" graphicTextGap="0.0" layoutX="9.0" layoutY="10.0" mnemonicParsing="false" styleClass="icon-button">
+                             <graphic>
+                                 <SVGPath id="close" content="M 0 0 A 1 1 0 0 0 0 11 A 1 1 0 0 0 0 0" styleClass="icon-button-color" />
+                             </graphic>
+                             <tooltip>
+                                 <Tooltip id="exitTooltip" text="%runtime.scenes.login.exitTooltip" />
+                             </tooltip>
+                         </Button>
+      
+                         <!-- Кнопка свернуть -->
+                         <Button id="minimize" layoutX="28.0" layoutY="10.0" mnemonicParsing="false" styleClass="icon-button">
+                             <graphic>
+                                 <SVGPath id="minimize" content="M 0 0 A 1 1 0 0 0 0 11 A 1 1 0 0 0 0 0" styleClass="icon-button-color" />
+                             </graphic>
+                             <tooltip>
+                                 <Tooltip id="minimizeTooltip" text="%runtime.scenes.login.minimizeTooltip" />
+                             </tooltip>
+                         </Button>
+                        <ImageView fitHeight="46.0" fitWidth="46.0" layoutX="429.0" layoutY="61.0">
+                           <image>
+                              <Image url="@../../images/VAULTHUB.png" />
+                           </image>
+                        </ImageView>
+                        <Text id="protextsemibold" layoutX="394.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="С ВОЗВРАЩЕНИЕМ!" />
+                        <Text id="prodisplaybold" layoutX="290.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="У Вас есть аккаунт?" />
+                        <Text id="protextregular" layoutX="258.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Войдите в аккаунт используя учётную запись VAULT ID." />
+                        <Text id="protextregular" layoutX="286.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="После нажатия на кнопку “Авторизоваться”, вы будете перемещенны на страницу для последующей авторизации." textAlignment="CENTER" wrappingWidth="331.2744140625" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+     </Pane>
+
+    <!-- Приветствие игрока -->
+   <Pane id="player" layoutX="224.0" layoutY="198.0" prefHeight="104.0" prefWidth="676.0" visible="false">
+      <children>
+         <ImageView id="playerHead" fitHeight="53.0" fitWidth="53.0" layoutX="13.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../images/icons/default.png" />
+            </image></ImageView>
+         <Label id="playerName" layoutX="79.0" layoutY="15.0" prefHeight="49.0" prefWidth="486.0" text="PLAYER123456" />
+         <Label id="welcome" layoutX="79.0" layoutY="57.0" text="%runtime.scenes.login.welcome" />
+      </children>
+   </Pane>
+
+    <!-- Подключение стилей-->
+    <stylesheets>
+        <URL value="@login.css" />
+        <URL value="@../../styles/global.css" />
+        <URL value="@../../styles/variables.css" />
+    </stylesheets>
+
+</Pane>

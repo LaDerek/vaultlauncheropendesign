@@ -1,0 +1,43 @@
+/*-- DrLeonardo styles refactor --*/
+
+@import "../../styles/global.css";
+@import "../../styles/variables.css";
+
+@font-face {
+    font-family: 'SF Pro Text Semibold';
+    src: url('../../styles/SF-Pro-Text-Semibold.otf');
+}
+
+@font-face {
+    font-family: 'SF Pro Text Regular';
+    src: url('../styles/SF-Pro-Text-Regular.otf');
+}
+
+.kill:hover,
+.kill:pressed {
+    -fx-fill: -fx-red !important;
+}
+#close{
+    -fx-fill: #F96057;
+}
+#minimize{
+    -fx-fill: #F8CE52;
+}
+#headingDialog{
+    -fx-font-size: 14px;
+    -fx-font-family: 'SF Pro Text Semibold';
+}
+#logout{
+    -fx-background-color: #242424;
+    -fx-background-radius: 7px;
+}
+#textlogout{
+    -fx-font-size: 14px;
+    -fx-font-family: 'SF Pro Text Semibold';
+}
+#version {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: 'SF Pro Text Regular';
+    -fx-font-size: 12px;
+}
+/*-- DrLeonardo styles refactor --*/

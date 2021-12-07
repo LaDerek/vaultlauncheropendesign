@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Text?>
+
+<!-- DrLeonardo refactor -->
+
+<Pane fx:id="optionsPane" prefHeight="500.0" prefWidth="900.0" styleClass="transparent, blur" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+
+    <!-- Навбар -->
+    <Pane id="header" prefHeight="500.0" prefWidth="900.0">
+        <!-- Кнопки управления -->
+        <Pane id="controls" layoutY="1.0" prefHeight="500.0" prefWidth="900.0">
+            <!-- Заголовок сцены -->
+            <Label id="headingDialog" layoutX="118.0" layoutY="46.0" prefHeight="25.0" prefWidth="417.0" text="%runtime.scenes.options.headingOptional" />
+
+            <!-- Кнопка назад -->
+            <Button id="back" layoutX="9.0" layoutY="39.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="102.0" styleClass="icon-button">
+                <tooltip>
+                    <Tooltip id="backTooltip" text="%runtime.scenes.options.backTooltip" />
+                </tooltip>
+            <graphic>
+               <Pane id="logout" prefHeight="32.0" prefWidth="165.0">
+                  <children>
+                     <Text id="textlogout" fill="WHITE" layoutX="29.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Назад" />
+                     <SVGPath content="M0.976562 7.35742C0.976562 7.63086 1.07812 7.86523 1.29688 8.06836L7.375 14.0215C7.54688 14.1934 7.76562 14.2871 8.02344 14.2871C8.53906 14.2871 8.95312 13.8809 8.95312 13.3574C8.95312 13.0996 8.84375 12.873 8.67188 12.6934L3.19531 7.35742L8.67188 2.02148C8.84375 1.8418 8.95312 1.60742 8.95312 1.35742C8.95312 0.833984 8.53906 0.427734 8.02344 0.427734C7.76562 0.427734 7.54688 0.521484 7.375 0.693359L1.29688 6.63867C1.07812 6.84961 0.976562 7.08398 0.976562 7.35742Z" fill="#797979" layoutX="11.0" layoutY="9.0" />
+                  </children>
+               </Pane>
+            </graphic>
+            </Button>
+
+            <!-- Кнопка закрыть -->
+            <Button id="exit" graphicTextGap="0.0" layoutX="9.0" layoutY="9.0" mnemonicParsing="false" styleClass="icon-button">
+                <graphic>
+                    <SVGPath id="close" content="M 0 0 A 1 1 0 0 0 0 11 A 1 1 0 0 0 0 0" styleClass="icon-button-color" />
+                </graphic>
+                <tooltip>
+                    <Tooltip id="exitTooltip" text="%runtime.scenes.login.exitTooltip" />
+                </tooltip>
+            </Button>
+
+            <!-- Кнопка свернуть -->
+            <Button id="minimize" layoutX="28.0" layoutY="9.0" mnemonicParsing="false" styleClass="icon-button">
+                <graphic>
+                    <SVGPath id="minimize" content="M 0 0 A 1 1 0 0 0 0 11 A 1 1 0 0 0 0 0" styleClass="icon-button-color" />
+                </graphic>
+                <tooltip>
+                    <Tooltip id="minimizeTooltip" text="%runtime.scenes.login.minimizeTooltip" />
+                </tooltip>
+            </Button>
+
+        </Pane>
+    </Pane>
+
+    <!-- Блок модов-->
+    <Pane id="options-detail" layoutX="241.0" layoutY="100.0" prefHeight="340.0" prefWidth="624.0">
+        <ScrollPane id="optionslist" hbarPolicy="NEVER" prefHeight="340.0">
+            <VBox fx:id="componentList" prefWidth="622.0">
+                <VBox prefHeight="49.0" prefWidth="622.0" styleClass="optional-container">
+                    <CheckBox mnemonicParsing="false" selected="true" styleClass="optional-checkbox" text="Для ознакомления" textFill="WHITE" />
+                    <Label styleClass="optional-label" text="Пример описания" textFill="WHITE" wrapText="true" />
+                </VBox>
+                <VBox styleClass="optional-container">
+                    <VBox.margin>
+                        <Insets left="30.0" />
+                    </VBox.margin>
+                    <CheckBox mnemonicParsing="false" styleClass="optional-checkbox" text="Для ознакомления" textFill="WHITE" />
+                    <Label styleClass="optional-label" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. " textFill="WHITE" wrapText="true" />
+                </VBox>
+                <VBox styleClass="optional-container">
+                    <CheckBox mnemonicParsing="false" selected="true" styleClass="optional-checkbox" text="Для ознакомления" textFill="WHITE" />
+                    <Label styleClass="optional-label" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. " textFill="WHITE" wrapText="true" />
+                </VBox>
+                <VBox styleClass="optional-container">
+                    <VBox.margin>
+                        <Insets left="30.0" />
+                    </VBox.margin>
+                    <CheckBox mnemonicParsing="false" selected="true" styleClass="optional-checkbox" text="Для ознакомления" textFill="WHITE" />
+                    <Label styleClass="optional-label" text="Пример описания" textFill="WHITE" wrapText="true" />
+                </VBox>
+                <VBox styleClass="optional-container">
+                    <VBox.margin>
+                        <Insets left="60.0" />
+                    </VBox.margin>
+                    <CheckBox mnemonicParsing="false" styleClass="optional-checkbox" text="Для ознакомления" textFill="WHITE" />
+                    <Label styleClass="optional-label" text="Пример описания" textFill="WHITE" wrapText="true" />
+                </VBox>
+            </VBox>
+        </ScrollPane>
+    </Pane>
+
+    <!-- Блок сервера-->
+    <Pane id="serverButton" layoutX="17.0" layoutY="101.0" prefHeight="340.0" prefWidth="190.0" />
+
+    <!-- Подключение стилей-->
+    <stylesheets>
+        <URL value="@options.css" />
+        <URL value="@../../styles/global.css" />
+        <URL value="@../../styles/variables.css" />
+    </stylesheets>
+
+</Pane>

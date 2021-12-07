@@ -1,0 +1,148 @@
+/*-- DrLeonardo styles refactor --*/
+
+@import "../../styles/global.css";
+@import "../../styles/variables.css";
+
+@font-face {
+    font-family: 'SF Pro Text Semibold';
+    src: url('../../styles/SF-Pro-Text-Semibold.otf');
+}
+@font-face {
+    font-family: 'SF Pro Text Regular';
+    src: url('../styles/SF-Pro-Text-Regular.otf');
+}
+
+/*-- Вывод данных --*/
+#settings-detail {
+    -fx-background-color: #242424;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 9px;
+}
+.optional-checkbox {
+    -fx-font-family: 'SF Pro Text Semibold';
+}
+
+#close{
+    -fx-fill: #F96057;
+}
+#minimize{
+    -fx-fill: #F8CE52;
+}
+#logout{
+    -fx-background-color: #242424;
+    -fx-background-radius: 7px;
+}
+#textlogout{
+    -fx-font-size: 14px;
+    -fx-font-family: 'SF Pro Text Semibold';
+}
+/* RAM настройки */
+#ramLabel {
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-background-radius: 12px;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: 'SF Pro Text Semibold';
+}
+#ramSlider > .track {
+    -fx-background-color: #242424;
+    -fx-background-radius: 10px;
+    -fx-pref-height: 10px;
+}
+#ramSlider > .thumb {
+    -fx-background-color: #505050;
+    -fx-pref-width: 14px;
+    -fx-pref-height: 14px;
+    -fx-pref-align: center;
+}
+#ramSlider > .colored-track {
+    -fx-background-color: #242424;
+    -fx-pref-height: 20px;
+}
+#ramSlider > .animated-thumb {
+    -fx-background-color: transparent;
+}
+#ramSlider > .slider-value {
+    -fx-fill: -fx-white;
+    -fx-stroke: -fx-white;
+}
+.ramtext {
+    -fx-font-size: 14px;
+    -fx-background-color: -fx-grayD;
+}
+#ramInfo {
+    -fx-font-size: 16px;
+    -fx-text-fill: -fx-grayD;
+}
+
+/*-- Чекбоксы --*/
+.settings-container {
+    -fx-padding: 15 0 0 15px;
+}
+.settings-checkbox {
+    -fx-fill: #FFFFFF;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+.settings-label {
+    -fx-fill: #FFFFFF;
+    -fx-text-fill: #808080;
+    -fx-font-size: 12px;
+    -fx-label-padding: 0 20 0 30px;
+}
+
+/* Смена директорий */
+#folder {
+    -fx-background-color: #242424;
+    -fx-background-radius: 0 0 9 9;
+    -fx-cursor: hand;
+}
+#patch {
+    -fx-font-size: 14px;
+    -fx-fill: #808080;
+    -fx-font-family: 'SF Pro Text Regular';
+}
+#patch:visited {
+    -fx-font-size: 14px;
+    -fx-fill: -fx-header;
+}
+#changeDir {
+    -fx-font-weight: bold;
+    -fx-font-size: 10px;
+    -fx-text-fill: #808080;
+    -fx-background-color: transparent;
+}
+#changeDir:hover,
+#changeDir:pressed {
+    -fx-text-fill: -fx-header-hover;
+}
+
+
+/* Описание Java */
+#javaError {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-fill: -fx-red;
+    -fx-text-fill: -fx-red;
+}
+#javaSelect {
+    -fx-background-color: -fx-grayLTr;
+}
+#javaSelect > #javaHeader {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-fill: #808080;
+    -fx-font-family: 'SF Pro Text Semibold';
+}
+#javaSelect > .javaDesc {
+    -fx-fill: #808080;
+    -fx-font-size: 12px;
+    -fx-font-family: 'SF Pro Text Regular';
+}
+#javaSelect > #javaPath {
+    -fx-font-size: 10px;
+    -fx-fill: #808080;
+    -fx-font-family: 'SF Pro Text Regular';
+}
+
+/*-- DrLeonardo styles refactor --*/

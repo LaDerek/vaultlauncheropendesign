@@ -1,0 +1,60 @@
+/*-- DrLeonardo styles refactor --*/
+
+@import "../../styles/global.css";
+@import "../../styles/variables.css";
+
+@font-face {
+    font-family: 'SF Pro Text Semibold';
+    src: url('../../styles/SF-Pro-Text-Semibold.otf');
+}
+
+/*-- DrLeonardo styles refactor --*/
+#playerlogoborder{
+    -fx-background-color: #242424;
+    -fx-background-radius: 128px;
+}
+#intertext{
+    -fx-font-size: 12px;
+    -fx-fill: #808080;
+    -fx-font-family: 'inter';
+}
+#close{
+    -fx-fill: #F96057;
+}
+#minimize{
+    -fx-fill: #F8CE52;
+}
+#nickname {
+    -fx-font-size: 14px;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: 'SF Pro Text Semibold';
+}
+#logout{
+    -fx-background-color: #242424;
+    -fx-background-radius: 7;
+}
+#textlogout{
+    -fx-font-size: 14px;
+    -fx-font-family: 'SF Pro Text Semibold';
+}
+#newtxt{
+    -fx-font-size: 22px;
+    -fx-fill: #FFFFFF;
+    -fx-font-family: 'SF Pro Text Semibold';
+}
+#contentnew{
+    -fx-background-color: #303030;
+    -fx-background-radius: 0px 9px 9px 0px;
+}
+#hub1{
+    -fx-background-image: url('../../images/hub1.png');
+    -fx-background-size: stretch;
+}
+#hub2{
+    -fx-background-image: url('../../images/hub2.png');
+    -fx-background-size: stretch;
+}
+#hub3{
+    -fx-background-image: url('../../images/hub3.png');
+    -fx-background-size: stretch;
+}

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Text?>
+
+<!-- DrLeonardo refactor -->
+
+<Pane fx:id="debugPane" prefHeight="500.0" prefWidth="900.0" styleClass="transparent, blur" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+
+   <!-- Навбар -->
+   <Pane id="header" prefHeight="500.0" prefWidth="900.0">
+      <children>
+
+         <!-- Кнопки управления -->
+         <Pane id="controls" prefHeight="500.0" prefWidth="900.0">
+            <children>
+
+               <!-- Версия Java -->
+               <Label id="version" alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" layoutX="17.0" layoutY="94.0" opacity="0.0" prefHeight="20.0" prefWidth="584.0" text="Launcher 5.1.0.0 Java: 1.8 u231 x64" textFill="#b3b8d5">
+                  <padding>
+                     <Insets right="10.0" />
+                  </padding>
+               </Label>
+
+               <!-- Заголовок сцены -->
+               <Label id="headingDialog" layoutX="126.0" layoutY="47.0" prefHeight="25.0" prefWidth="417.0" text="%runtime.scenes.debug.headingDebug" textFill="WHITE" />
+
+               <!-- Кнопка назад -->
+               <Button id="back" layoutX="9.0" layoutY="39.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="102.0" styleClass="icon-button">
+                  <tooltip>
+                     <Tooltip id="backTooltip" text="%runtime.scenes.debug.backTooltip" />
+                  </tooltip>
+                  <graphic>
+                     <Pane id="logout" prefHeight="32.0" prefWidth="165.0">
+                        <children>
+                           <Text id="textlogout" fill="WHITE" layoutX="29.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Назад" />
+                           <SVGPath content="M0.976562 7.35742C0.976562 7.63086 1.07812 7.86523 1.29688 8.06836L7.375 14.0215C7.54688 14.1934 7.76562 14.2871 8.02344 14.2871C8.53906 14.2871 8.95312 13.8809 8.95312 13.3574C8.95312 13.0996 8.84375 12.873 8.67188 12.6934L3.19531 7.35742L8.67188 2.02148C8.84375 1.8418 8.95312 1.60742 8.95312 1.35742C8.95312 0.833984 8.53906 0.427734 8.02344 0.427734C7.76562 0.427734 7.54688 0.521484 7.375 0.693359L1.29688 6.63867C1.07812 6.84961 0.976562 7.08398 0.976562 7.35742Z" fill="#797979" layoutX="11.0" layoutY="9.0" />
+                        </children>
+                     </Pane>
+                  </graphic>
+               </Button>
+
+               <!-- Кнопка закрыть -->
+               <Button id="exit" graphicTextGap="0.0" layoutX="9.0" layoutY="10.0" mnemonicParsing="false" styleClass="icon-button">
+                  <graphic>
+                     <SVGPath id="close" content="M 0 0 A 1 1 0 0 0 0 11 A 1 1 0 0 0 0 0" styleClass="icon-button-color" />
+                  </graphic>
+                  <tooltip>
+                     <Tooltip id="exitTooltip" text="%runtime.scenes.serverinfo.exitTooltip" />
+                  </tooltip>
+               </Button>
+      
+               <!-- Кнопка свернуть -->
+               <Button id="minimize" layoutX="28.0" layoutY="10.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" styleClass="icon-button">
+                  <graphic>
+                     <SVGPath id="minimize" content="M 0 0 A 1 1 0 0 0 0 11 A 1 1 0 0 0 0 0" styleClass="icon-button-color" />
+                  </graphic>
+                  <tooltip>
+                     <Tooltip id="minimizeTooltip" text="%runtime.scenes.serverinfo.minimizeTooltip" />
+                  </tooltip>
+               </Button>
+
+               <!-- Кнопка убить процесс -->
+               <Button id="kill" alignment="CENTER" contentDisplay="CENTER" layoutX="779.0" layoutY="39.0" prefHeight="40.0" prefWidth="112.0" styleClass="icon-button, kill">
+                  <tooltip>
+                     <Tooltip id="killTooltip" text="%runtime.scenes.debug.killTooltip" />
+                  </tooltip>
+                  <graphic>
+                     <Pane id="logout" prefHeight="32.0" prefWidth="108.0">
+                        <children>
+                           <SVGPath content="M9.99121 18.7422C14.9746 18.7422 19.0879 14.6289 19.0879 9.6543C19.0879 4.67969 14.9658 0.566406 9.98242 0.566406C5.00781 0.566406 0.90332 4.67969 0.90332 9.6543C0.90332 14.6289 5.0166 18.7422 9.99121 18.7422ZM6.99414 13.4863C6.52832 13.4863 6.15918 13.1172 6.15918 12.6426C6.15918 12.4316 6.24707 12.2207 6.41406 12.0625L8.80469 9.66309L6.41406 7.27246C6.24707 7.11426 6.15918 6.90332 6.15918 6.69238C6.15918 6.21777 6.52832 5.85742 6.99414 5.85742C7.24023 5.85742 7.43359 5.93652 7.5918 6.09473L9.99121 8.48535L12.3994 6.08594C12.5752 5.91895 12.7598 5.83984 12.9971 5.83984C13.4629 5.83984 13.832 6.20898 13.832 6.6748C13.832 6.89453 13.7441 7.08789 13.5771 7.26367L11.1865 9.66309L13.5771 12.0537C13.7354 12.2207 13.8232 12.4229 13.8232 12.6426C13.8232 13.1172 13.4541 13.4863 12.9795 13.4863C12.7422 13.4863 12.54 13.3984 12.373 13.2402L9.99121 10.8584L7.60938 13.2402C7.45117 13.4072 7.24023 13.4863 6.99414 13.4863Z" layoutX="6.0" layoutY="6.0" styleClass="icon-button-error" />
+                           <Text id="textlogout" fill="WHITE" layoutX="30.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Закрыть" />
+                        </children>
+                     </Pane>
+                  </graphic>
+               </Button>
+
+               <!-- Кнопка hastebin -->
+               <Button id="hastebin" alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="654.0" layoutY="39.0" prefHeight="40.0" prefWidth="124.0" styleClass="icon-button">
+                  <tooltip>
+                     <Tooltip id="hasteTooltip" text="%runtime.scenes.debug.hasteTooltip" />
+                  </tooltip>
+                  <graphic>
+                     <Pane id="logout" prefHeight="32.0" prefWidth="146.0">
+                        <children>
+                           <Text id="textlogout" fill="WHITE" layoutX="24.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hastebin" />
+                        </children>
+                     </Pane>
+                  </graphic>
+               </Button>
+
+            </children>
+         </Pane>
+      </children>
+   </Pane>
+
+               <Pane id="output-detail" layoutX="17.0" layoutY="89.0" prefHeight="396.0" prefWidth="866.0">
+      <children>
+         <TextArea id="output" editable="false" layoutX="4.0" prefHeight="396.0" prefWidth="862.0" wrapText="true" />
+      </children>
+   </Pane>
+
+   <!-- Подключение стилей-->
+   <stylesheets>
+      <URL value="@debug.css" />
+      <URL value="@../../styles/global.css" />
+      <URL value="@../../styles/variables.css" />
+   </stylesheets>
+
+</Pane>
